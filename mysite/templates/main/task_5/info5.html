@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ua-ua">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/info5.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="{% static "img/Logo_vektor.ico" %}" type="image/x-icon">
+
+  <title>{% block title %} 8 {% endblock %}</title>
+</head>
+
+<body>
+{% block content %}
+<div class="text">
+  <p>Купляючи мені гітару, батьки <b>думали</b>,<br>
+    що вже через тиждень я то все <b>закину</b>&#128532;<br>
+    Не тут то було, через <b>місяць</b> я написав свою <b>першу пісню</b>. Через <b>пів року</b> почав <b>записувати пісні</b> дома.<br>
+    А зараз, <b>через 4 роки</b>, я пишу свою музику, пісні, інколи <b>виступаю</b> перед публікою.</p>
+
+  <form class="field" action="{% url 'quest:answer5' %}" method="POST">
+
+    {% csrf_token %}
+
+    <textarea autofocus placeholder="А в чому знаходиш натхнення ти?" name = "text"></textarea>
+    <button onclick="document.location='{% url 'quest:final' %}'" type="submit" name="button" >Надіслати</button>
+
+  </form>
+
+</div>
+
+</body>
+{% endblock %}
+</html>

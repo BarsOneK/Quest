@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% load static %}
+  <link href="{% static 'css/task5.css' %}" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="{% static "img/Logo_vektor.ico" %}" type="image/x-icon">
+
+  <title>{% block title %} 8 {% endblock %}</title>
+</head>
+
+<body>
+  {% block content %}
+  <main class="main">
+    <h2 id="header">Музикант&#127928;<br>
+    Життя — це пісня.</h2>
+    <h4 id="goal">Прослухай і оціни</h4>
+  </main>
+
+<div class="audio">
+  <audio controls>
+    <source src="{% static 'audio/Titanic.ogg' %}" type="audio/ogg; codecs=vorbis">
+    <source src="{% static 'audio/Titanic.mp3' %}" type="audio/mpeg">
+    <a href="audio/music.mp3">Завантажити</a>.
+  </audio>
+</div>
+
+
+<form action="{% url 'quest:value' %}" method="POST" class="slidecontainer">
+
+  {% csrf_token %}
+
+  <input name="range" type="range" min="0" max="10" value="0" class="slider" id="myRange">
+  <p class="point">Оцінка: <span id="demo"></span></p>
+  <div class="but">
+    <button type="submit" name="button" onclick="{% url 'quest:value' %}">Надіслати</button>
+  </div>
+</form>
+
+<script src="{% static 'js/slider.js' %}">
+
+</script>
+{% endblock %}
+</html>

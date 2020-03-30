@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ua-ua">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/info3.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="{% static "img/Logo_vektor.ico" %}" type="image/x-icon">
+
+  <title>{% block title %} 4 {% endblock %}</title>
+</head>
+
+<body>
+
+{% block content %}
+
+<div class="text">
+  <p>Мене інколи питають: "<b>Чого</b> ти на <b>ЛА</b> пішов?"<br>
+  І в мене є геніальна відповідь: "Щоб таких <b>красунь як ти</b> вміти <b>наздогнати</b>&#128523;"</p>
+
+  <form class="field" action="{% url 'quest:answer3' %}" method="POST">
+
+    {% csrf_token %}
+
+    <textarea autofocus placeholder="Віртуальні бар'єри ти підкорила, а як в тебе справи з реальними?" name = "text"></textarea>
+    <button onclick="document.location='{% url 'quest:task4' %}'" type="submit" name="button" >Надіслати</button>
+
+  </form>
+
+</div>
+
+{% endblock %}
+
+</body>
+
+</html>

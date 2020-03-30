@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ua-ua">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  {% load static %}
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static "css/task1.css" %}">
+  <link rel="shortcut icon" href="{% static "img/Logo_vektor.ico" %}" type="image/x-icon">
+
+  <title>{% block title %} 0 {% endblock %}</title>
+
+</head>
+
+<body>
+
+{% block content %}
+
+<main class="main">
+  <h2 id="header">Я программєр,<br> або "Hello World"&#128522;</h2>
+  <h4 id="goal">Збери 5 яблук</h4>
+</main>
+
+<canvas id="game" width="400" height="500"></canvas>
+<script src="{% static "js/game.js" %}"></script>
+
+{% endblock %}
+
+</body>
+</html>

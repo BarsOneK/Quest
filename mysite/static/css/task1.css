@@ -1,0 +1,50 @@
+body::before {
+  content: '';
+  position: fixed;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  background: url('../img/t1.jpg') center / cover no-repeat;
+  filter: blur(3px);
+  z-index: -1;
+}
+body {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 100%;
+}
+.main {
+  	margin: 2%;
+    padding: 1%;
+    color: rgb(0, 255, 0);
+    border-radius: 10%;
+    text-align: center;
+}
+#header {
+  letter-spacing: 5px;
+  line-height: 40px;
+}
+
+canvas {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  display: block;
+}
+
+#goal {
+  padding-top: 0;
+  margin-top: 0;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    margin-top: 7%;
+    border-radius: 20%;
+  }
+  #header {
+    font-size: 95%;
+    letter-spacing: 2px;
+    line-height: 25px;
+  }
+}

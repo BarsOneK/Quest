@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ua-ua">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% load static %}
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/final.css' %}">
+  <link rel="shortcut icon" href="{% static "img/Logo_vektor.ico" %}" type="image/x-icon">
+
+  <title>{% block title %} ФІНАЛ {% endblock %}</title>
+</head>
+<body>
+{% block content %}
+<div id="main-back">
+
+<p id="message"><b>НІЧЬОСІ!!!</b>&#128561;<br>
+  Ти добралась до завершення квесту?&#128515;<br>
+  ВІТАЮ!!! <b>Ти молодець!</b><br>
+  А перед тим як ти взнаєш як отримати приз, трохи фактів.<br>
+  Ну маю ж я право повипендрюватись.&#128521;<br><br>
+  На даний квест було витрачено більше 150 годин робочого часу і<br>
+  освоєно 2 нові технології.<br><br>
+  А щодо призу, то <b>тобі в межах 3-5 днів прийде смс'ка</b>.<br>
+  Запасись терпінням і чекай&#128521;<br><br>
+  P.S. Це моя улюблена твоя фотка :)
+</p>
+<h3 id="name">One-K</h3>
+
+</div>
+{% endblock %}
+</body>
+</html>

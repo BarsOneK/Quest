@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ua-ua">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  {% load static %}
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+  <link rel="shortcut icon" href="{% static "img/Logo_vektor.ico" %}" type="image/x-icon">
+
+  <title>{% block title %} Квест для Насті {% endblock %}</title>
+</head>
+<body>
+
+{% block content %}
+
+<div class="main-back">
+
+<p id="message">Привіт <b>Настю</b> &#128521;<br>
+В мене для Тебе є цікавий <b>квест</b>, пройшовши який до кінця, Ти зможеш виграти реальний <b>приз</b>.<br>
+Складатись він буде з <b>5 етапів</b>. Наступний буде відкриватись після проходження попереднього.<br>
+Під час проходження квесту Ти дізнаєшся про свого прихильника, який хоче познайомитись поближче. &#128525;<br>
+Я трошки розповім про себе, а ти — про себе.<br><br>
+P.S. Приз тебе не розчарує &#128540;<br>
+Нехай щастить!
+</p>
+<h3 id="name">One-K</h3>
+
+</div>
+
+<div class="menu">
+  <button onclick="document.location='{% url 'quest:task1' %}'" type="submit" name="button">СТАРТ</button>
+</div>
+
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ua-ua">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/info2.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="{% static "img/Logo_vektor.ico" %}" type="image/x-icon">
+
+  <title>{% block title %} 6 {% endblock %}</title>
+
+</head>
+
+<body>
+
+{% block content %}
+
+<div class="text">
+  <p>А виявляється, що ти досить терпляча.<br>
+  Значить приз тебе не розчарує.<br>
+  До речі, <b>я каааааапець непосидючий</b>. Якщо щочь <b>стрільнуло</b> в голову, то обов'язково це <b>реалізую</b>.<br>
+  Навіть цей квест кілька місяців тому був тільки ідеєю, яка промайнула в моїй голові. А зараз Ти читаєш це текст.</p>
+
+  <form class="field" action="{% url 'quest:answer2' %}" method="POST">
+
+    {% csrf_token %}
+
+    <textarea autofocus placeholder="А на що готова ти заради ідеї чи мрії?" name = "text"></textarea>
+    <button onclick="document.location='{% url 'quest:task3' %}'" type="submit" name="button" >Надіслати</button>
+
+  </form>
+
+</div>
+
+{% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+body::before {
+  content: '';
+  position: fixed;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  background: url("../img/song.png") center / cover no-repeat;
+  filter: blur(1px);
+  z-index: -1;
+}
+body {
+  font-family: 'Press Start 2P';
+  font-size: 90%;
+}
+
+.main {
+  	margin: 1%;
+    padding: 1%;
+    color: rgb(0, 255, 0);
+    text-align: center;
+}
+#header {
+  letter-spacing: 5px;
+  line-height: 30px;
+}
+
+#goal {
+  padding-top: 0;
+  margin-top: 0;
+  text-align: center;
+  color: white;
+}
+.audio {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 20vh;
+  margin-bottom: 5%;
+}
+
+
+.slidecontainer {
+    margin: 0 auto;
+    margin-top: 3vh;
+    width: 90%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 5px; /* Specified height */
+    background: #fff; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 35px; /* Set a specific slider handle width */
+    height: 35px; /* Slider handle height */
+    background: rgb(0, 255, 0); /* Green background */
+    border-radius: 50%;
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: yellow; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.point {
+  text-align: center;
+  color: white;
+  margin-bottom: 10%;
+}
+
+.but {
+  text-align: center;
+}
+button {
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid yellow;
+  width: 30%;
+  height: 5vh;
+  background: rgba(0, 0, 0, .3);
+  color: yellow;
+  font-family: 'Press Start 2P', cursive;
+}

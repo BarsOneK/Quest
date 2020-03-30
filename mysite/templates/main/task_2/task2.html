@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ua-ua">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/task2.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="{% static "img/Logo_vektor.ico" %}" type="image/x-icon">
+
+  <title>{% block title %} 8 {% endblock %}</title>
+</head>
+
+<body>
+
+{% block content %}
+
+<main class="main">
+  <h2 id="header">Нетерплячий,<br> але цілеспрямований&#128522;</h2>
+  <h4 id="goal">Клікай по смайлику</h4>
+</main>
+
+<canvas id="game2" width="400" height="400" onclick="direction()"></canvas>
+<div class="backline">
+  <div id="mainline">
+
+  </div>
+</div>
+<script src="{% static 'js/game2.js' %}"></script>
+
+{% endblock %}
+
+</body>
+
+</html>

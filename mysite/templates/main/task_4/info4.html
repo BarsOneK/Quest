@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ua-ua">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/info4.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="{% static "img/Logo_vektor.ico" %}" type="image/x-icon">
+
+  <title>{% block title %} 7 {% endblock %}</title>
+</head>
+
+<body>
+{% block content %}
+<div class="text">
+  <p>Мій кращий друг сказав, що я <b>головою</b> трохи <b>тріснувся</b>,<br>
+    почувши мою ідею <b>проїхатись на велосипедах до Харкова</b> (понад 1000КМ)<br>
+    Після чого запитав: "Коли виїжджаємо?"&#128514;<br>
+    Це звучить <b>безглуздо</b>, але <b>цього літа</b> я це <b>реалізую</b>!</p>
+
+  <form class="field" action="{% url 'quest:answer4' %}" method="POST">
+
+    {% csrf_token %}
+
+    <textarea autofocus placeholder="А яку найбезглуздішу ідею хочеш реалізувати ти?" name = "text"></textarea>
+    <button onclick="document.location='{% url 'quest:task5' %}'" type="submit" name="button" >Надіслати</button>
+
+  </form>
+
+</div>
+
+{% endblock %}
+</body>
+
+</html>
