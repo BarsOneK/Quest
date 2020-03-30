@@ -3,8 +3,8 @@ body::before {
   position: fixed;
   left: 0; right: 0;
   top: 0; bottom: 0;
-  background: url('../img/la.png') center / cover no-repeat;
-  filter: blur(3px);
+  background: url('../img/la.JPG') center / cover no-repeat;
+  filter: blur(5px);
   z-index: -2;
 }
 body {
