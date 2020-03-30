@@ -74,7 +74,7 @@ function drawGame() {
 
 
   if (snakeX < 0 || snakeX > box * 9 || snakeY < 0 || snakeY > box * 9)
-    location.href = "../task_1";
+    clearInterval(game);
 
   if (dir == "left") snakeX -=box;
   if (dir == "right") snakeX +=box;
