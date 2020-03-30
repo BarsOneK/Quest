@@ -24,7 +24,7 @@
 
     {% csrf_token %}
 
-    <textarea autofocus placeholder="А в чому знаходиш натхнення ти?" name = "text"></textarea>
+    <textarea autofocus placeholder="А що є джерелом натхнення і позитиву для тебе?" name = "text"></textarea>
     <button onclick="document.location='{% url 'quest:final' %}'" type="submit" name="button" >Надіслати</button>
 
   </form>
