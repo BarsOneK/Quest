@@ -13,8 +13,8 @@ body {
   -webkit-user-select: none;
 }
 .main {
-  	margin: 2%;
-    padding: 1%;
+  	margin: 1vh;
+    margin-top: 10vh;
     color: rgb(0, 255, 0);
     text-align: center;
 }
